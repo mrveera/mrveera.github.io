@@ -1,1 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://mrveera.dev/categories/</loc></url><url><loc>https://mrveera.dev/tags/</loc></url><url><loc>https://mrveera.dev/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mrveera.dev/posts/prompt-injection-via-dependencies/</loc>
+    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://mrveera.dev/categories/ai/</loc>
+    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://mrveera.dev/tags/ai-agents/</loc>
+    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://mrveera.dev/categories/</loc>
+    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://mrveera.dev/tags/nodejs/</loc>
+    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://mrveera.dev/posts/</loc>
+    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://mrveera.dev/tags/prompt-injection/</loc>
+    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://mrveera.dev/categories/security/</loc>
+    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://mrveera.dev/tags/security/</loc>
+    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://mrveera.dev/tags/supply-chain/</loc>
+    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://mrveera.dev/tags/</loc>
+    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://mrveera.dev/</loc>
+    <lastmod>2024-06-09T00:00:00+00:00</lastmod>
+  </url>
+</urlset>

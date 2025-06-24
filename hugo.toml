@@ -1,0 +1,7 @@
+baseURL = 'https://mrveera.dev/'
+languageCode = 'en-us'
+theme = "hugo-dusk"
+
+# Disable Google Analytics
+googleAnalytics = ""
+publishDir = "docs"

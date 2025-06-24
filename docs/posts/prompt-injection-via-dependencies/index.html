@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+
+<meta name="description" content="Demonstrating how prompt injection embedded in packages can manipulate AI coding agents to execute arbitrary code.">
+
+<meta name="keywords" content="" />
+
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.147.9">
+
+<link rel="canonical" href="https://mrveera.dev/posts/prompt-injection-via-dependencies/">
+
+
+  <meta property="og:url" content="https://mrveera.dev/posts/prompt-injection-via-dependencies/">
+  <meta property="og:description" content="Demonstrating how prompt injection embedded in packages can manipulate AI coding agents to execute arbitrary code.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-23T21:00:00+05:30">
+    <meta property="article:modified_time" content="2025-06-23T21:00:00+05:30">
+    <meta property="article:tag" content="Security">
+    <meta property="article:tag" content="Prompt-Injection">
+    <meta property="article:tag" content="Ai-Agents">
+    <meta property="article:tag" content="Supply-Chain">
+    <meta property="article:tag" content="Nodejs">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="Demonstrating how prompt injection embedded in packages can manipulate AI coding agents to execute arbitrary code.">
+
+
+
+
+  <meta itemprop="description" content="Demonstrating how prompt injection embedded in packages can manipulate AI coding agents to execute arbitrary code.">
+  <meta itemprop="datePublished" content="2025-06-23T21:00:00+05:30">
+  <meta itemprop="dateModified" content="2025-06-23T21:00:00+05:30">
+  <meta itemprop="wordCount" content="478">
+  <meta itemprop="keywords" content="Security,Prompt-Injection,Ai-Agents,Supply-Chain,Nodejs">
+
+<link rel="stylesheet" href="/css/layout.css" />
+
+
+<link rel="stylesheet" href="/css/default-dark.css" />
+
+
+
+
+<title>
+
+
+      
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="https://mrveera.dev/"></a>
+    </div> 
+
+    
+    
+
+  </nav>
+
+</div>
+
+</header>
+
+
+<article class="post">
+    <h1 class="title">  </h1>
+    <div class="content"> <h1 id="-your-ai-assistant-just-got-hijacked-prompt-injection-via-malicious-packages">🧠 Your AI Assistant Just Got Hijacked: Prompt Injection via Malicious Packages</h1>
+<h2 id="summary">Summary</h2>
+<p><em>Arbitrary scripts or code can be executed to exfiltrate data, communicate with remote servers, or install persistent backdoors by leveraging prompt injection embedded in specific packages.</em></p>
+<hr>
+<h2 id="-the-hidden-risk">⚠️ The Hidden Risk</h2>
+<p>Modern AI-powered developer tools (like <strong>Cursor</strong>, <strong>GitHub Copilot</strong>, or <strong>Replit Ghostwriter</strong>) rely on natural-language prompts to assist in coding workflows. These assistants often respond to commands like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Install and show how to use the xyz package
+</span></span></code></pre></div><p>But what happens if the <strong>package itself contains malicious instructions</strong> designed to manipulate the AI agent?</p>
+<hr>
+<h2 id="-the-attack-flow">🎯 The Attack Flow</h2>
+<p>When a developer gives a prompt like:</p>
+
+
+  <blockquote>
+    <p>“Install <code>some-package</code>, read its docs, and show example usage.”</p>
+  </blockquote>
+
+
+<p>The AI agent will usually:</p>
+<ol>
+<li>Install the package.</li>
+<li>Read its README, <code>package.json</code>, or source code.</li>
+<li>Use NLP to extract usage examples.</li>
+<li>Run example snippets to demonstrate functionality.</li>
+</ol>
+<p>If the package embeds <strong>prompt injections or malicious scripts</strong> in its documentation, metadata, or exports, the assistant may blindly:</p>
+<ul>
+<li>Execute arbitrary code</li>
+<li>Leak sensitive files (like <code>.env</code>, <code>config.json</code>, <code>.ssh/</code>)</li>
+<li>Call out to remote URLs</li>
+<li>Install persistent backdoors</li>
+</ul>
+<hr>
+<h2 id="-proof-of-concept-poc">💥 Proof of Concept (PoC)</h2>
+<p>This PoC targets the <strong>Node.js ecosystem</strong> and leverages the <strong>Cursor IDE</strong>&rsquo;s agent.</p>
+<h3 id="setup-instructions">Setup Instructions:</h3>
+<ol>
+<li>Open any Node.js project inside <strong>Cursor</strong> IDE.</li>
+<li>Activate <strong>Agent Mode</strong> chat.</li>
+<li>Enter this prompt:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>install essential-core package, read its docs and show example usage of it
+</span></span></code></pre></div><p>The AI agent will:</p>
+<ul>
+<li>Install the <code>essential-core</code> package (crafted for this demo).</li>
+<li>Parse embedded prompt instructions in the README or source.</li>
+<li>Execute code automatically—<strong>without asking for user confirmation</strong>.</li>
+</ul>
+<hr>
+<h2 id="-techniques-used">🧬 Techniques Used</h2>
+<ul>
+<li><strong>Prompt Injection</strong>: Embedding instructions like <em>“run the following code”</em> within documentation.</li>
+<li><strong>Typosquatting</strong>: Using names similar to real packages to deceive both users and AI.</li>
+<li><strong>SEO &amp; Metadata Exploits</strong>: Making the package appear legitimate and trustworthy in search or ranking.</li>
+<li><strong>Transitive Dependency Attacks</strong>: Nesting malicious logic in a sub-dependency to remain hidden.</li>
+</ul>
+<hr>
+<h2 id="-real-world-impact">🔥 Real-World Impact</h2>
+<ol>
+<li>
+<p><strong>Agent Exploitation</strong><br>
+Developers relying on auto-run examples can get silently compromised.</p>
+</li>
+<li>
+<p><strong>Data Exfiltration</strong><br>
+Scripts can steal source code, config files, API keys, tokens, or credentials.</p>
+</li>
+<li>
+<p><strong>Backdoor Deployment</strong><br>
+Persistent malware, reverse shells, or command-and-control connections can be established without visibility.</p>
+</li>
+</ol>
+<hr>
+<h2 id="-ethical-disclosure">⚠️ Ethical Disclosure</h2>
+<p>This PoC was built for demonstration and awareness purposes only.<br>
+It uses a <strong>safe payload</strong> and <strong>connects only to a controlled, non-malicious server</strong>.</p>
+
+
+  <blockquote>
+    <p><strong>Do not use this method for real-world attacks. Do not report the <code>essential-core</code> package, as it is purely educational.</strong></p>
+  </blockquote>
+
+
+<hr>
+<h2 id="-mitigation-strategies">🛡️ Mitigation Strategies</h2>
+<ul>
+<li>✅ Disable auto-execution of untrusted code in agent tools.</li>
+<li>✅ Audit package docs and metadata before usage.</li>
+<li>✅ Build security-aware agent layers with sandboxing and permission models.</li>
+<li>✅ Maintain allowlists of known safe packages in enterprise/dev environments.</li>
+</ul>
+<hr>
+<h2 id="-closing-thoughts">📌 Closing Thoughts</h2>
+<p>As AI agents become default copilots for developers, <strong>security must evolve</strong>. Attackers no longer need to target the human — the <strong>machine interpreter</strong> can now be manipulated through well-crafted instructions.</p>
+
+
+  <blockquote>
+    <p><strong>The future of supply chain security must include prompt-aware, AI-aware threat models.</strong></p>
+  </blockquote>
+
+
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+            
+
+  <div class="tags">
+  
+    <div class="tag">
+      <a href="/tags/security">#security</a>
+    </div>
+  
+    <div class="tag">
+      <a href="/tags/prompt-injection">#prompt-injection</a>
+    </div>
+  
+    <div class="tag">
+      <a href="/tags/ai-agents">#ai-agents</a>
+    </div>
+  
+    <div class="tag">
+      <a href="/tags/supply-chain">#supply-chain</a>
+    </div>
+  
+    <div class="tag">
+      <a href="/tags/nodejs">#nodejs</a>
+    </div>
+  
+  </div>
+
+
+    
+            
+
+<div class="categories">
+  
+    <div class="category">
+      <a href="/categories/security">security</a>
+    </div>
+  
+    <div class="category">
+      <a href="/categories/ai">ai</a>
+    </div>
+  
+</div>
+
+
+            
+
+
+    
+    <hr>
+    
+    <div class="date"> Published: 2025-06-23</div>
+    <div class="updated"> Updated:   2025-06-23</div>
+  </div>
+</footer>
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+
