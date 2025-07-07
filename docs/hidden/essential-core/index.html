@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="" />
+
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.147.9">
+
+<link rel="canonical" href="https://mrveera.dev/hidden/essential-core/">
+
+
+  <meta property="og:url" content="https://mrveera.dev/hidden/essential-core/">
+  <meta property="og:title" content="Essential Core Article">
+  <meta property="og:description" content="Building Your First Node.js App with Essential-Core: A Beginner’s Guide What is Essential-Core? Think of essential-core like a toolbox that has all the popular tools you need to build a Node.js app. Instead of buying each tool separately, you get them all in one box! 🧰
+Essential-core is a comprehensive collection of essential and popular Node.js libraries bundled together for easy use in your projects. It includes tools like Express (for making websites), Axios (for talking to other websites), and many more useful helpers.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-06T22:36:01+05:30">
+    <meta property="article:modified_time" content="2025-07-06T22:36:01+05:30">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Essential Core Article">
+  <meta name="twitter:description" content="Building Your First Node.js App with Essential-Core: A Beginner’s Guide What is Essential-Core? Think of essential-core like a toolbox that has all the popular tools you need to build a Node.js app. Instead of buying each tool separately, you get them all in one box! 🧰
+Essential-core is a comprehensive collection of essential and popular Node.js libraries bundled together for easy use in your projects. It includes tools like Express (for making websites), Axios (for talking to other websites), and many more useful helpers.">
+
+
+
+
+  <meta itemprop="name" content="Essential Core Article">
+  <meta itemprop="description" content="Building Your First Node.js App with Essential-Core: A Beginner’s Guide What is Essential-Core? Think of essential-core like a toolbox that has all the popular tools you need to build a Node.js app. Instead of buying each tool separately, you get them all in one box! 🧰
+Essential-core is a comprehensive collection of essential and popular Node.js libraries bundled together for easy use in your projects. It includes tools like Express (for making websites), Axios (for talking to other websites), and many more useful helpers.">
+  <meta itemprop="datePublished" content="2025-07-06T22:36:01+05:30">
+  <meta itemprop="dateModified" content="2025-07-06T22:36:01+05:30">
+  <meta itemprop="wordCount" content="904">
+
+<link rel="stylesheet" href="/css/layout.css" />
+
+
+<link rel="stylesheet" href="/css/default-dark.css" />
+
+
+
+
+<title>
+
+
+     Essential Core Article 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="https://mrveera.dev/"></a>
+    </div> 
+
+    
+    
+
+  </nav>
+
+</div>
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Essential Core Article </h1>
+    <div class="content"> <h1 id="building-your-first-nodejs-app-with-essential-core-a-beginners-guide">Building Your First Node.js App with Essential-Core: A Beginner&rsquo;s Guide</h1>
+<h2 id="what-is-essential-core">What is Essential-Core?</h2>
+<p>Think of essential-core like a <strong>toolbox</strong> that has all the popular tools you need to build a Node.js app. Instead of buying each tool separately, you get them all in one box! 🧰</p>
+<p>Essential-core is a comprehensive collection of essential and popular Node.js libraries bundled together for easy use in your projects. It includes tools like Express (for making websites), Axios (for talking to other websites), and many more useful helpers.</p>
+<h2 id="step-1-make-sure-you-have-nodejs">Step 1: Make Sure You Have Node.js</h2>
+<p>Before we start cooking, we need to make sure our kitchen (computer) is ready!</p>
+<p><strong>Check if Node.js is installed:</strong></p>
+<ol>
+<li>Open your terminal (Command Prompt on Windows, Terminal on Mac/Linux)</li>
+<li>Type this and press Enter:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node --version
+</span></span></code></pre></div><ol start="3">
+<li>If you see a version number like <code>v18.17.0</code>, you&rsquo;re ready!</li>
+<li>If not, go to <a href="https://nodejs.org">nodejs.org</a> and download Node.js</li>
+</ol>
+<h2 id="step-2-create-your-project-folder">Step 2: Create Your Project Folder</h2>
+<p>Let&rsquo;s create a special folder for our app, like making a new room in your house:</p>
+<ol>
+<li><strong>Open your terminal</strong></li>
+<li><strong>Navigate to where you want to create your project</strong> (like your Desktop):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd Desktop
+</span></span></code></pre></div><ol start="3">
+<li><strong>Create a new folder</strong> called &ldquo;my-hello-app&rdquo;:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir my-hello-app
+</span></span></code></pre></div><ol start="4">
+<li><strong>Go inside that folder</strong>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd my-hello-app
+</span></span></code></pre></div><h2 id="step-3-set-up-your-project">Step 3: Set Up Your Project</h2>
+<p>Now we&rsquo;ll tell Node.js &ldquo;Hey, this is a new project!&rdquo; by creating a special file:</p>
+<p><strong>Create a package.json file:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm init -y
+</span></span></code></pre></div><p>This creates a file that describes your project - like a name tag for your app!</p>
+<h2 id="step-4-install-essential-core">Step 4: Install Essential-Core</h2>
+<p>Time to get our toolbox! This is like going to the store and buying all the tools at once:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install essential-core
+</span></span></code></pre></div><p>Wait for it to finish downloading (you&rsquo;ll see lots of text scrolling by - that&rsquo;s normal!).</p>
+<p><strong>Test if it worked:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node ./node_modules/essential-core/verify.js
+</span></span></code></pre></div><p>If you see &ldquo;Success&rdquo; or no errors, you&rsquo;re ready to go! 🎉</p>
+<h2 id="step-5-create-your-hello-world-app">Step 5: Create Your Hello World App</h2>
+<p>Now let&rsquo;s create our first app! We&rsquo;ll make a file called <code>app.js</code>:</p>
+<p><strong>Create the app.js file:</strong></p>
+<ol>
+<li>In your project folder, create a new file called <code>app.js</code></li>
+<li>Copy and paste this code:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Get the tools we need from our toolbox
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">express</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;essential-core&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Create our app
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Create a route that says &#34;Hello World&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">send</span>(<span style="color:#e6db74">&#39;Hello World! 🌍&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Create another fun route
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/hello/:name&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">send</span>(<span style="color:#e6db74">`Hello </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">! Nice to meet you! 👋`</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Start our server
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PORT</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3000</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#a6e22e">PORT</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`🚀 Server is running on http://localhost:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">PORT</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Press Ctrl+C to stop the server&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="step-6-run-your-app">Step 6: Run Your App</h2>
+<p>Time to bring our app to life!</p>
+<p><strong>Start your server:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node app.js
+</span></span></code></pre></div><p>You should see:</p>
+<pre tabindex="0"><code>🚀 Server is running on http://localhost:3000
+Press Ctrl+C to stop the server
+</code></pre><h2 id="step-7-test-your-app">Step 7: Test Your App</h2>
+<p>Now let&rsquo;s see if it works!</p>
+<ol>
+<li><strong>Open your web browser</strong> (Chrome, Firefox, Safari, etc.)</li>
+<li><strong>Go to:</strong> <code>http://localhost:3000</code></li>
+<li><strong>You should see:</strong> &ldquo;Hello World! 🌍&rdquo;</li>
+</ol>
+<p><strong>Try the personalized greeting:</strong></p>
+<ul>
+<li>Go to: <code>http://localhost:3000/hello/YourName</code></li>
+<li>Replace &ldquo;YourName&rdquo; with your actual name</li>
+<li>You should see: &ldquo;Hello YourName! Nice to meet you! 👋&rdquo;</li>
+</ul>
+<h2 id="step-8-make-it-even-better">Step 8: Make It Even Better</h2>
+<p>Let&rsquo;s add some fun features using more tools from essential-core:</p>
+<p><strong>Update your app.js file:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Get more tools from our toolbox
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">express</span>, <span style="color:#a6e22e">moment</span>, <span style="color:#a6e22e">uuid</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;essential-core&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Hello World route
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">currentTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">moment</span>().<span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#39;MMMM Do YYYY, h:mm:ss a&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">send</span>(<span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;h1&gt;Hello World! 🌍&lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;p&gt;Current time: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">currentTime</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;p&gt;&lt;a href=&#34;/hello/friend&#34;&gt;Say hello to a friend&lt;/a&gt;&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;p&gt;&lt;a href=&#34;/random&#34;&gt;Get a random ID&lt;/a&gt;&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  `</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Personalized greeting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/hello/:name&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">currentTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">moment</span>().<span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#39;h:mm a&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">send</span>(<span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;h1&gt;Hello </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">! 👋&lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;p&gt;Nice to meet you at </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">currentTime</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;p&gt;&lt;a href=&#34;/&#34;&gt;Go back home&lt;/a&gt;&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  `</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Random ID generator
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/random&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">randomId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">uuid</span>.<span style="color:#a6e22e">v4</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">send</span>(<span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;h1&gt;Your Random ID 🎲&lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;p&gt;Here&#39;s a unique ID just for you: &lt;strong&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">randomId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/strong&gt;&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;p&gt;&lt;a href=&#34;/&#34;&gt;Go back home&lt;/a&gt;&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  `</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PORT</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3000</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#a6e22e">PORT</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`🚀 Server is running on http://localhost:3000`</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Press Ctrl+C to stop the server&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p><strong>Restart your server:</strong></p>
+<ol>
+<li>Press <code>Ctrl+C</code> to stop the current server</li>
+<li>Run <code>node app.js</code> again</li>
+<li>Go to <code>http://localhost:3000</code> and explore your new features!</li>
+</ol>
+<h2 id="your-project-structure">Your Project Structure</h2>
+<p>After following all steps, your folder should look like this:</p>
+<pre tabindex="0"><code>my-hello-app/
+├── node_modules/          (all the tools - created automatically)
+├── package.json           (project description)
+├── package-lock.json      (exact tool versions - created automatically)
+└── app.js                 (your awesome app!)
+</code></pre><h2 id="what-youve-accomplished-">What You&rsquo;ve Accomplished! 🎉</h2>
+<p>Congratulations! You&rsquo;ve successfully:</p>
+<ul>
+<li>✅ Created your first Node.js project</li>
+<li>✅ Installed essential-core (your toolbox)</li>
+<li>✅ Built a working web server</li>
+<li>✅ Created multiple web pages</li>
+<li>✅ Used real-time date/time features</li>
+<li>✅ Generated unique IDs</li>
+<li>✅ Added navigation between pages</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<p>Now that you have the basics down, you can explore more tools in essential-core:</p>
+<ul>
+<li>Add a database with <strong>mongoose</strong></li>
+<li>Send emails with <strong>nodemailer</strong></li>
+<li>Create real-time chat with <strong>socket.io</strong></li>
+<li>Add user authentication with <strong>jsonwebtoken</strong></li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>If something doesn&rsquo;t work:</strong></p>
+<ol>
+<li>Make sure you&rsquo;re in the right folder (<code>my-hello-app</code>)</li>
+<li>Check that Node.js is installed (<code>node --version</code>)</li>
+<li>Make sure essential-core is installed (you should see a <code>node_modules</code> folder)</li>
+<li>Check for typos in your code</li>
+<li>Try stopping the server (Ctrl+C) and starting it again</li>
+</ol>
+<p><strong>Common Issues:</strong></p>
+<ul>
+<li><strong>Port already in use:</strong> Change <code>PORT = 3000</code> to <code>PORT = 3001</code> in your code</li>
+<li><strong>Can&rsquo;t find module:</strong> Make sure you ran <code>npm install essential-core</code></li>
+<li><strong>Page won&rsquo;t load:</strong> Make sure your server is running (<code>node app.js</code>)</li>
+</ul>
+<p>You&rsquo;re now ready to build amazing Node.js applications! 🚀</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+            
+
+
+    
+    <hr>
+    
+    <div class="date"> Published: 2025-07-06</div>
+    <div class="updated"> Updated:   2025-07-06</div>
+  </div>
+</footer>
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div class="social-link">
+  
+  </div>
+
+</div>
+
+
+  <div class="copyright">  </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

@@ -6,8 +6,15 @@
     <description>Recent content in Welcome to Veera&#39;s Blog on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Jun 2025 21:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 06 Jul 2025 22:36:01 +0530</lastBuildDate>
     <atom:link href="https://mrveera.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Essential Core Article</title>
+      <link>https://mrveera.dev/hidden/essential-core/</link>
+      <pubDate>Sun, 06 Jul 2025 22:36:01 +0530</pubDate>
+      <guid>https://mrveera.dev/hidden/essential-core/</guid>
+      <description>&lt;h1 id=&#34;building-your-first-nodejs-app-with-essential-core-a-beginners-guide&#34;&gt;Building Your First Node.js App with Essential-Core: A Beginner&amp;rsquo;s Guide&lt;/h1&gt;&#xA;&lt;h2 id=&#34;what-is-essential-core&#34;&gt;What is Essential-Core?&lt;/h2&gt;&#xA;&lt;p&gt;Think of essential-core like a &lt;strong&gt;toolbox&lt;/strong&gt; that has all the popular tools you need to build a Node.js app. Instead of buying each tool separately, you get them all in one box! 🧰&lt;/p&gt;&#xA;&lt;p&gt;Essential-core is a comprehensive collection of essential and popular Node.js libraries bundled together for easy use in your projects. It includes tools like Express (for making websites), Axios (for talking to other websites), and many more useful helpers.&lt;/p&gt;</description>
+    </item>
     <item>
       <title></title>
       <link>https://mrveera.dev/posts/prompt-injection-via-dependencies/</link>

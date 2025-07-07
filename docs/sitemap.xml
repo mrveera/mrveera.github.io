@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mrveera.dev/hidden/essential-core/</loc>
+    <lastmod>2025-07-06T22:36:01+05:30</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0</priority>
+  </url><url>
+    <loc>https://mrveera.dev/posts/</loc>
+    <lastmod>2025-07-06T22:36:01+05:30</lastmod>
+  </url><url>
     <loc>https://mrveera.dev/posts/prompt-injection-via-dependencies/</loc>
     <lastmod>2025-06-23T21:00:00+05:30</lastmod>
   </url><url>
@@ -15,9 +23,6 @@
     <lastmod>2025-06-23T21:00:00+05:30</lastmod>
   </url><url>
     <loc>https://mrveera.dev/tags/nodejs/</loc>
-    <lastmod>2025-06-23T21:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://mrveera.dev/posts/</loc>
     <lastmod>2025-06-23T21:00:00+05:30</lastmod>
   </url><url>
     <loc>https://mrveera.dev/tags/prompt-injection/</loc>
